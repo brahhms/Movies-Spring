@@ -1,0 +1,69 @@
+body{
+	padding: 20px;
+	padding-top: 40px;
+}
+
+
+.form-signin, .form-signup{
+	margin-top:30px;
+	width: 250px;
+	position: absolute;
+	
+}
+
+.form-signin{
+	right: 30px;
+}
+.form-signup{
+	left: 30px;
+	display: none;
+}
+
+.cont_signin{
+	background-color: #CACACA;
+
+	
+}
+.cont_signup{
+	background-color: #BCBCBC;
+
+}
+
+.logIn{
+	height:300px;
+}
+
+.form_active_login {
+	top:25px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.btn_sign{
+	position:absolute;
+	height: 100%;
+	background-color: inherit;
+	color: #DB6193;
+	
+}
+.btn_sign:hover{
+	background-color: #CCCCCB;
+}
+
+#btn_signin{
+	right:0px;
+	display:none;
+}
+#btn_signup{
+	left: 0px;
+}
+.btn-primary{
+	background-color: #DB6193;
+	border-color: none;
+}
+.btn-primary:hover{
+	background-color: #c34378;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+ 	<meta charset="utf-8"/>
+	<title>movies</title>
+	<!-- css -->
+	<div th:replace="fragments/header :: header-css"/>
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/indexStyle.css"/>
+       
+</head>
+
+<body>
+	<button onclick="mostarOcultarLs();" id="btn-settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i></button>
+	<div class="list-group">
+	  <a href="#" onclick="fetchSites();" class="list-group-item list-group-item-action">Peliculas Favoritas</a>
+	  <a href="/logout" class="list-group-item list-group-item-action">Cerrar Sesion</a>
+	</div>
+	
+
+
+	<div th:replace="fragments/header :: header"/>
+  	
+	<div class="container  grid">
+	    <div id="gridRow" class="row ">	      
+	    </div>
+  	</div>
+ 	  	
+	<div th:replace="fragments/footer :: footer-js"/>
+	<script src="/js/contentSearch.js" type="text/javascript"></script>
+	<script type="text/javascript">fetchSites();</script>   
+</body>
+
+</html>

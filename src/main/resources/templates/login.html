@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+ 	<meta charset="utf-8"/>
+	<title>login</title>
+	<!-- bootstrap -->
+	<div th:replace="fragments/header :: header-css"/>
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/loginStyle.css"/>
+
+</head>
+
+<body class="text-center">
+
+	<div sec:authorize="isAuthenticated()">
+	  Usted ya esta logueado.
+	</div>
+	
+
+<img class="mb-4 img-thumbnail " src="/img/profile-img.png" alt="" width="72" height="72"/>
+
+<div class="logIn row">
+	<div class="cont_signin col-11 col-sm-6">
+		<button id="btn_signin" class="btn btn_sign" onclick="cambiar_login()"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>			
+
+		<form method="POST" action="/login" class="form-signin">
+			<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+		
+			<input type="email" name="username" class="form-control" placeholder="Email address" required="true" autofocus="true" />
+			
+			<input type="password" name="password" class="form-control" placeholder="Password" required="true" />
+		
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+		</form>	
+	</div>
+	<div class="cont_signup  col-1 col-sm-6">
+		<button id="btn_signup" class="btn btn_sign" onclick="cambiar_sign_up()"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+		
+		<form method="POST" action="/user/save" class="form-signup">		
+			<h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+			
+			<input type="text" name="username" class="form-control" placeholder="Username" required="true" autofocus="true" />		
+
+			<input type="email" name="email" class="form-control" placeholder="Email address" required="true"  />
+			
+			<input type="password" name="password" class="form-control" placeholder="Password" required="true" />
+		
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+		</form>
+	</div>
+</div>
+
+
+
+
+<p class="mt-5 mb-3 text-muted">brahhms.2018</p>
+			  	
+<div th:replace="fragments/footer :: footer-js"/>
+<script  src="/js/login.js"></script>
+</body>
+
+</html>
